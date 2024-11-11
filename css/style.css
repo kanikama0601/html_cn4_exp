@@ -5,9 +5,9 @@
 }
 
 header {
-    background-color: #333333;
+    background-color: #ffffff;
     padding: 1rem 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.4);
     position: fixed;
     width: 100%;
     top: 0;
@@ -25,7 +25,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #ededed;
     text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ header {
 }
 
 .nav-menu a {
-    color: #333;
+    color: #101010;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -83,11 +83,11 @@ header {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #333;
+        background-color: #ffffff;
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 7px 5px rgba(0,0,0,0.3);
     }
 
     .nav-menu.active {
@@ -96,14 +96,6 @@ header {
 
     .nav-menu li {
         margin: 16px 0;
-    }
-
-    .nav-menu a, .logo {
-        color: #e0e0e0; /* ナビゲーションとロゴの文字色 */
-    }
-    
-    .nav-menu a:hover {
-        color: #c0c0c0; /* ナビゲーションリンクのホバー時の色 */
     }
 }
 
@@ -156,36 +148,38 @@ header {
 }
 
 .slider-dot.active {
-    background: white;
+    background: rgb(250, 250, 250);
 }
 
 /* コンテンツエリアのスタイル */
 .content-container {
-    background-color: #555555; /* コンテンツ部分の濃い灰色 */
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: #ffffff; /* コンテンツ部分の濃い灰色 */
     padding: 20px;
     border-radius: 8px;
 }
 
 .content-section {
-    background-color: #777777; /* 薄めの灰色 */
+    background-color: #ebebeb; /* 薄めの灰色 */
     padding: 20px;
     border-radius: 8px;
     color: #ffffff;
 }
 
 body {
-    background-color: #1e1e1e; /* ダークグレー背景 */
+    background-color: #ffffff; /* ダークグレー背景 */
     color: #e0e0e0; /* 明るい文字色 */
 }
 
 h2 {
-    color: #ffffff;
+    color: #a5a5a5;
     margin-bottom: 20px;
     font-size: 24px;
 }
 
 p {
-    color: #d0d0d0;
+    color: #2d2d2d;
     margin-bottom: 15px;
 }
 
@@ -200,70 +194,97 @@ p {
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
-
-
-ここから下まだやってない
-/* ページ全体のダークテーマ */
 body {
-    background-color: #1e1e1e; /* ダークグレー背景 */
-    color: #e0e0e0; /* 明るい文字色 */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: block;
 }
 
-header {
-    background-color: #333333; /* ヘッダーのダークグレー */
+.album-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    gap: 80px;  /* 間隔を40pxから80pxに増加 */
+    align-items: flex-start;
+    padding: 20px;  /* コンテナ全体にパディングを追加 */
 }
 
-.nav-menu a, .logo {
-    color: #e0e0e0; /* ナビゲーションとロゴの文字色 */
+.album-cover {
+    width: 300px;
+    flex-shrink: 0;
 }
 
-.nav-menu a:hover {
-    color: #c0c0c0; /* ナビゲーションリンクのホバー時の色 */
+.album-cover img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* コンテンツエリアのスタイル */
-.content-container {
-    background-color: #555555; /* コンテンツ部分の濃い灰色 */
-    padding: 20px;
-    border-radius: 8px;
+.album-info {
+    flex: 1;
+    min-width: 0;
+    padding-right: 20px;  /* 右側にもパディングを追加 */
+    padding-left: 100px;
 }
 
-/* 中央部分の薄い灰色 */
-.content-section {
-    background-color: #777777; /* 薄めの灰色 */
-    padding: 20px;
-    border-radius: 8px;
-    color: #ffffff;
+.album-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #222;
 }
 
-h2 {
-    color: #ffffff;
+.release-info {
+    margin-bottom: 30px;
 }
 
-p {
-    color: #d0d0d0;
+.release-info p {
+    margin-bottom: 8px;
 }
 
-/* スライダー部分の色調整 */
-.slider-dot {
-    background: rgba(255, 255, 255, 0.5);
+.track-list {
+    list-style: none;
 }
 
-.slider-dot.active {
-    background: #ffffff;
+.track-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
 }
 
-/* ハンバーガーメニュー */
-.bar {
-    background-color: #e0e0e0; /* ハンバーガーアイコンの色 */
+.track-list li:last-child {
+    border-bottom: none;
 }
 
-/* レスポンシブ対応 */
+.track-number {
+    display: inline-block;
+    width: 30px;
+    color: #888;
+}
+
 @media (max-width: 768px) {
-    .nav-menu {
-        background-color: #333333; /* ナビゲーションメニュー背景 */
+    .album-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;  /* モバイル表示時は間隔を少し狭める */
+        margin: 20px auto;
+        padding: 15px;  /* モバイル表示時のパディングを調整 */
+    }
+    
+    .album-cover {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .album-info {
+        width: 100%;
+        padding: 0 15px;
     }
 }
