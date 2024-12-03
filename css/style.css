@@ -53,6 +53,8 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+/* レスポンシブ対応 */
+/* 横幅が短いときに適応 */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
