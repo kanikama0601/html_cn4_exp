@@ -283,3 +283,15 @@ body {
         padding: 0 15px;
     }
 }
+
+.music-service {
+    text-align: center;
+}
+
+.music-service img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
